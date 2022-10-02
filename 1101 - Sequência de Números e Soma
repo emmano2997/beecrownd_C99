@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void){
+    int m, n, soma, x;
+
+    m = n = 1;
+    while(m > 0 && n > 0){
+        scanf("%d %d", &m, &n);
+        if (m > 0 && n > 0){
+            if (m > n){
+                x = m;
+                m = n;
+                n = x;
+            }
+            soma = 0;
+            for(int i = m; i <= n; i++){
+                printf("%d ", i);
+                soma += i;
+            }
+            printf("Sum=%d\n", soma);
+        }
+    }
+
+    return 0;
+}
+
