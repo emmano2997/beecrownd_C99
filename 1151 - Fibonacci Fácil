@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void){
+    int n, i;
+    int ant1, ant2, novo;
+
+    ant2 = 0;
+    ant1 = 1;
+
+    scanf("%d", &n);
+
+    if (n == 1){
+        printf("0\n");
+    }else if (n == 2){
+        printf("0 1\n");
+    }else{
+        printf("0 1 ");
+        for(i = 3; i <= n; i++){
+            novo = ant1 + ant2;
+            printf("%d", novo);
+            if (i == n){
+                printf("\n");
+            }else{
+                printf(" ");
+            }
+            ant2 = ant1;
+            ant1 = novo;
+        }
+    }
+
+    return 0;
+}
